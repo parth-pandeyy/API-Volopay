@@ -1,33 +1,3 @@
-// const fs = require('fs');
-// const http = require('http');
-// const url = require('url');
-// const slugify = require('slugify');
-
-// const server = http.createServer((req, res) => {
-//   const data = fs.readFileSync(
-//     `${__dirname}/volopaydata/volopaydata.json`,
-//     'utf-8'
-//   );
-//   const objData = JSON.parse(data);
-
-//   if (req.url == '/') {
-//     res.end('hello');
-//   } else if (req.url == '/volopaydata') {
-//     res.writeHead(200, { 'content-type': 'application/json' });
-//     res.end(objData[1].user);
-//   } else {
-//     res.writeHead(404, {
-//       'content-type': 'text/html',
-//       'my-own-header': 'hey-Volopaydata, parth this side',
-//     });
-//     res.end('<h1>page not found!</h1>');
-//   }
-// });
-
-// server.listen(8000, '127.0.0.1', () => {
-//   console.log('Listening the request on port 8000');
-// });
-
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
@@ -47,17 +17,7 @@ const server = http.createServer((req, res) => {
 
     //------------------------------------------------------------------------------
     // Api 1 condition:
-    // const thirdQuarterSeats = objData.reduce((total, obj) => {
-    //   const date = new Date(obj.date);
-    //   const quarter = Math.floor(date.getMonth() / 3 + 1);
-
-    //   if (quarter === 3) {
-    //     return total + obj.seats;
-    //   }
-
-    //   return total;
-    // }, 0);
-
+    
     let thirdQuarterSeats = 0;
 
     objData.forEach((obj) => {
